@@ -20,4 +20,5 @@ RUN pip install -r requirements.txt
 RUN pip install jupyterlab
 
 EXPOSE 5000 
-CMD ["python3", "server.py"]
+ENTRYPOINT ["python3"]
+CMD ["server.py"]

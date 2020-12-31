@@ -1,5 +1,3 @@
-#!bin/sh
-
 docker run \
   -v $(pwd)/app:/app \
   --name grammar-ai \
