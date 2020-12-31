@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Vreedu Grammar
+  </title>
+  <style>
+    h2 {
+      margin-top: 10vh;
+      text-align: center;
+    }
+
+    .full {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .inputs {
+      display: grid;
+      grid-template-rows: 7fr 1fr;
+
+    }
+
+    form {
+      /* Just to center the form on the page */
+      margin: 0 auto;
+      width: 400px;
+      /* To see the outline of the form */
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+    }
+
+    form div+div {
+      /* div div 사이에 여백 추가*/
+      margin-top: 1em;
+    }
+
+    textarea {
+      font-size: 1.5em;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .result {
+      text-align: center;
+      width: 50%;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="full">
+    <h2>Type any text to be improved</h2><br>
+    <div>
+      <form method="GET" action="/result">
+        <label for="char1"></label>
+        <div class="inputs">
+          <textarea name="char1">{{ text }}</textarea>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="result">
+      <p>
+        {{ result }}
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

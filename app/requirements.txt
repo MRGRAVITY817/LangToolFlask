@@ -1,0 +1,6 @@
+setuptools
+language_tool_python
+pandas
+xlrd
+openpyxl
+flask
